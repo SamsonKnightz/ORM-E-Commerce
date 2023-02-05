@@ -7,7 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "watch": "nodemon server.js",
-    "seed": "node seeds/index.js"
+    "seed": "node seeds/index.js",
+    "db:sync": "node db/sync",
+    "db:seed": "node seeds/seed",
+    "env:copy": "cp .env"
     
   },
   "repository": {
