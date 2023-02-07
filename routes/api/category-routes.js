@@ -14,6 +14,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+// Our get route by id, we use findbypk to find the destructured category id including the product model, if not the category data we are looking for, send error and message
 router.get('/:id', async (req, res) => {
   try {
     const categoryData = await Category.findByPk(req.params.id, {
@@ -43,6 +44,7 @@ router.post('/', async (req, res) => {
   }
 });
 
+// Our delete by id function will delete the category by using the destroy method where tells us the deconstructured location, if the category data does not match, we will send error.
 router.delete('/:id', async (req, res) => {
   try {
     const categoryData = await Category.destroy({
